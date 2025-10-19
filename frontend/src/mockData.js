@@ -119,38 +119,5 @@ export const brands = [
   "EPCOS"
 ];
 
-export const blogPosts = [
-  {
-    id: 1,
-    title: "Contactor (Khởi động từ) là gì, cấu tạo và ứng dụng của Contactor",
-    excerpt: "Tìm hiểu chi tiết về contactor, nguyên lý hoạt động và ứng dụng trong công nghiệp",
-    date: "2024-01-15"
-  },
-  {
-    id: 2,
-    title: "Aptomat là gì, cấu tạo aptomat, các thông số cơ bản của Aptomat",
-    excerpt: "Hướng dẫn chi tiết về aptomat, cách chọn aptomat phù hợp cho hệ thống điện",
-    date: "2024-01-10"
-  },
-  {
-    id: 3,
-    title: "Aptomat chống giật",
-    excerpt: "Tìm hiểu về aptomat chống giật ELCB, RCCB và vai trò trong an toàn điện",
-    date: "2024-01-05"
-  },
-  {
-    id: 4,
-    title: "Ro le nhiệt",
-    excerpt: "Nguyên lý hoạt động và cách lắp đặt relay nhiệt bảo vệ động cơ",
-    date: "2023-12-28"
-  },
-  {
-    id: 5,
-    title: "Tụ bù tiết kiệm điện",
-    excerpt: "Giải pháp bù công suất hiệu quả, tiết kiệm chi phí điện năng cho doanh nghiệp",
-    date: "2023-12-20"
-  }
-];
-
 // Import this for product details
 export { featuredProducts } from './productData';
