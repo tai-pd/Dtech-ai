@@ -99,19 +99,53 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section id="products" className="py-16 bg-gradient-to-br from-gray-50 to-white">
+      {/* Products by Categories */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            Sản phẩm nổi bật
+            Sản phẩm theo danh mục
           </h2>
           <p className="text-center text-gray-600 mb-12">
             Thiết bị điện công nghiệp chính hãng từ các thương hiệu hàng đầu thế giới
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+
+          {/* Group products by category */}
+          <div className="space-y-16">
+            {navigationCategories.map((category) => {
+              const categoryProducts = featuredProducts.filter(
+                product => product.category === category.name
+              );
+
+              // Only show categories that have products
+              if (categoryProducts.length === 0) return null;
+
+              return (
+                <div key={category.id} className="category-section">
+                  {/* Category Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                        {category.name}
+                      </h3>
+                      <p className="text-gray-600">{category.description}</p>
+                    </div>
+                    <button
+                      onClick={() => navigate(`/category/${category.slug}`)}
+                      className="px-6 py-2 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all"
+                    >
+                      Xem tất cả
+                    </button>
+                  </div>
+
+                  {/* Products Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {categoryProducts.map((product) => (
+                      <ProductCard key={product.id} product={product} />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
