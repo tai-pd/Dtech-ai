@@ -111,7 +111,7 @@ export const featuredProducts = [
     id: 2,
     slug: "thiet-bi-dien-mitsubishi",
     name: "Thiết bị điện Mitsubishi",
-    category: "Thiết bị động cắt",
+    category: "Thiết bị đóng cắt",
     brand: "Mitsubishi Electric",
     manufacturer: "Nhật Bản",
     image: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=400&h=300&fit=crop",
