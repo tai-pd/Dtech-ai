@@ -193,7 +193,7 @@ export const featuredProducts = [
     id: 3,
     slug: "thiet-bi-dien-schneider",
     name: "Thiết bị điện Schneider",
-    category: "Thiết bị động cắt",
+    category: "Thiết bị đóng cắt",
     brand: "Schneider Electric",
     manufacturer: "Pháp",
     image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&h=300&fit=crop",
