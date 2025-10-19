@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Zap, ThumbsUp, Shield, TrendingUp, Users, Award, Phone } from 'lucide-react';
-import { companyInfo, services, brands, blogPosts } from '../mockData';
+import { companyInfo, services, brands } from '../mockData';
+import { blogPosts } from '../blogData';
 import { featuredProducts } from '../productData';
 import ProductCard from './ProductCard';
 
