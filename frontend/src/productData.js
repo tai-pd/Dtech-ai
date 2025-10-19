@@ -252,7 +252,7 @@ export const featuredProducts = [
     id: 4,
     slug: "bien-tan-invt",
     name: "Biến tần INVT",
-    category: "Biến tần",
+    category: "Biến tần - Inverter",
     brand: "INVT",
     manufacturer: "Trung Quốc",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
