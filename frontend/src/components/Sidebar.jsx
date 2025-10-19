@@ -51,7 +51,13 @@ const Sidebar = ({ isOpen, onClose }) => {
                   onClick={() => toggleCategory(category.id)}
                   className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-blue-50 transition-colors group"
                 >
-                  <span className="font-medium text-gray-700 group-hover:text-blue-600 transition-colors">
+                  <span 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleCategoryClick(category.slug);
+                    }}
+                    className="font-medium text-gray-700 group-hover:text-blue-600 transition-colors cursor-pointer"
+                  >
                     {category.name}
                   </span>
                   {expandedCategories.includes(category.id) ? (
