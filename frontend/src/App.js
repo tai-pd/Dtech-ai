@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
+import ProductDetailPage from './components/ProductDetailPage';
 import ChatWidget from './components/ChatWidget';
 import './App.css';
 
@@ -27,6 +28,7 @@ function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/product/:slug" element={<ProductDetailPage />} />
             </Routes>
           </main>
         </div>
