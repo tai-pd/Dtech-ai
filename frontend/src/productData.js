@@ -371,7 +371,7 @@ export const featuredProducts = [
     id: 8,
     slug: "tu-dien-bu-cong-suat",
     name: "Tủ điện bù công suất",
-    category: "Tủ điện",
+    category: "Thiết bị bù CSPK",
     brand: "DTech",
     manufacturer: "Việt Nam",
     image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdfcb2?w=400&h=300&fit=crop",
