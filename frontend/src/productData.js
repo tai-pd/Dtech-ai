@@ -356,7 +356,7 @@ export const featuredProducts = [
     id: 7,
     slug: "tu-dien-phan-phoi",
     name: "Tủ điện phân phối",
-    category: "Tủ điện",
+    category: "Thiết kế và Lắp đặt Tủ điện",
     brand: "DTech",
     manufacturer: "Việt Nam",
     image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
