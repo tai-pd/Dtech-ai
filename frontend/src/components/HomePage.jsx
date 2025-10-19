@@ -1,6 +1,7 @@
 import React from 'react';
 import { Zap, ThumbsUp, Shield, TrendingUp, Users, Award, Phone } from 'lucide-react';
-import { companyInfo, featuredProducts, services, brands, blogPosts } from '../mockData';
+import { companyInfo, services, brands, blogPosts } from '../mockData';
+import { featuredProducts } from '../productData';
 import ProductCard from './ProductCard';
 
 const HomePage = () => {
