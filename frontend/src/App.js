@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import EnhancedProductDetailPage from './components/EnhancedProductDetailPage';
 import BlogDetailPage from './components/BlogDetailPage';
+import CategoryPage from './components/CategoryPage';
 import ChatWidget from './components/ChatWidget';
 import './App.css';
 
