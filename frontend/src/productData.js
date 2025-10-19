@@ -386,7 +386,7 @@ export const featuredProducts = [
     id: 9,
     slug: "tu-dieu-khien-dong-co",
     name: "Tủ điều khiển động cơ",
-    category: "Tủ điện",
+    category: "Thiết kế và Lắp đặt Tủ điện",
     brand: "DTech",
     manufacturer: "Việt Nam",
     image: "https://images.unsplash.com/photo-1581092583537-20d51876f31f?w=400&h=300&fit=crop",
