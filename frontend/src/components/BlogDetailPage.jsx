@@ -57,9 +57,18 @@ const BlogDetailPage = () => {
 
   return (
     <div className="flex-1 bg-gray-50">
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
+      {/* Back Button - Top Left */}
+      <div className="bg-white border-b sticky top-0 z-10">
+        <div className="container mx-auto px-4 py-3">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors group mb-2"
+          >
+            <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+            <span className="font-semibold">Quay lại</span>
+          </button>
+          
+          {/* Breadcrumb */}
           <div className="flex items-center space-x-2 text-sm">
             <button onClick={() => navigate('/')} className="text-gray-600 hover:text-blue-600 transition-colors">
               Trang chủ
