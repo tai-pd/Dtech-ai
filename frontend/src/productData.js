@@ -5,7 +5,7 @@ export const featuredProducts = [
     id: 1,
     slug: "thiet-bi-dien-ls",
     name: "Thiết bị điện LS",
-    category: "Thiết bị động cắt",
+    category: "Thiết bị đóng cắt",
     brand: "LS Electric",
     manufacturer: "Hàn Quốc",
     image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&h=300&fit=crop",
