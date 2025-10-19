@@ -151,21 +151,28 @@ const HomePage = () => {
             {blogPosts.slice(0, 3).map((post) => (
               <article
                 key={post.id}
-                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 overflow-hidden"
+                onClick={() => {
+                  navigate(`/blog/${post.slug}`);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 overflow-hidden cursor-pointer"
               >
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
                 <div className="p-6">
                   <div className="text-sm text-gray-500 mb-2">{post.date}</div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
-                  <a
-                    href="#"
-                    className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                  >
+                  <span className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
                     Đọc thêm →
-                  </a>
+                  </span>
                 </div>
               </article>
             ))}
