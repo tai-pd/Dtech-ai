@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ChevronRight, Phone, Mail, ShoppingCart, Check, Star, Package, Shield, Truck, ChevronLeft } from 'lucide-react';
-import { featuredProducts, companyInfo } from '../mockData';
+import { featuredProducts } from '../productData';
+import { companyInfo } from '../mockData';
 
 const ProductDetailPage = () => {
   const { slug } = useParams();
