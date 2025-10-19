@@ -416,7 +416,7 @@ export const featuredProducts = [
     id: 11,
     slug: "thiet-bi-do-dem-idec",
     name: "Thiết bị đo đếm IDEC",
-    category: "Đo đếm",
+    category: "Đo đếm - Giám sát - Điều khiển",
     brand: "IDEC",
     manufacturer: "Nhật Bản",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
