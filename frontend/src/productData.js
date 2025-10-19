@@ -431,7 +431,7 @@ export const featuredProducts = [
     id: 12,
     slug: "thiet-bi-do-emic",
     name: "Thiết bị đo EMIC",
-    category: "Đo đếm",
+    category: "Đo đếm - Giám sát - Điều khiển",
     brand: "EMIC",
     manufacturer: "Thổ Nhĩ Kỳ",
     image: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=400&h=300&fit=crop",
