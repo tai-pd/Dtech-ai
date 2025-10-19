@@ -7,6 +7,8 @@ import { featuredProducts } from '../productData';
 import ProductCard from './ProductCard';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  
   const iconMap = {
     Zap: Zap,
     ThumbsUp: ThumbsUp,
