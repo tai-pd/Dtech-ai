@@ -326,7 +326,7 @@ export const featuredProducts = [
     id: 6,
     slug: "bien-tan-ls",
     name: "Biến tần LS",
-    category: "Biến tần",
+    category: "Biến tần - Inverter",
     brand: "LS Electric",
     manufacturer: "Hàn Quốc",
     image: "https://images.unsplash.com/photo-1581092583537-20d51876f31f?w=400&h=300&fit=crop",
