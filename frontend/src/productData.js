@@ -296,7 +296,7 @@ export const featuredProducts = [
     id: 5,
     slug: "bien-tan-fuji",
     name: "Biến tần Fuji",
-    category: "Biến tần",
+    category: "Biến tần - Inverter",
     brand: "Fuji Electric",
     manufacturer: "Nhật Bản",
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop",
