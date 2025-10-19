@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
-import ProductDetailPage from './components/ProductDetailPage';
+import EnhancedProductDetailPage from './components/EnhancedProductDetailPage';
 import ChatWidget from './components/ChatWidget';
 import './App.css';
 
