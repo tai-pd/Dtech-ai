@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, ThumbsUp, Shield, TrendingUp, Users, Award } from 'lucide-react';
+import { Zap, ThumbsUp, Shield, TrendingUp, Users, Award, Phone } from 'lucide-react';
 import { companyInfo, featuredProducts, services, brands, blogPosts } from '../mockData';
 import ProductCard from './ProductCard';
 
