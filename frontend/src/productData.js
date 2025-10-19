@@ -401,7 +401,7 @@ export const featuredProducts = [
     id: 10,
     slug: "tu-bu-tiet-kiem-dien",
     name: "Tụ bù tiết kiệm điện",
-    category: "Tụ bù CSPK",
+    category: "Thiết bị bù CSPK",
     brand: "Samsung",
     manufacturer: "Hàn Quốc",
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop",
