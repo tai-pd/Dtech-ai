@@ -30,6 +30,7 @@ function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/category/:slug" element={<CategoryPage />} />
               <Route path="/product/:slug" element={<EnhancedProductDetailPage />} />
               <Route path="/blog/:slug" element={<BlogDetailPage />} />
             </Routes>
