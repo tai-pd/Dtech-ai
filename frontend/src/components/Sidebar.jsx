@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { navigationCategories } from '../mockData';
 
 const Sidebar = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
   const [expandedCategories, setExpandedCategories] = useState([1]);
 
   const toggleCategory = (categoryId) => {
@@ -11,6 +13,12 @@ const Sidebar = ({ isOpen, onClose }) => {
         ? prev.filter(id => id !== categoryId)
         : [...prev, categoryId]
     );
+  };
+
+  const handleCategoryClick = (slug) => {
+    navigate(`/category/${slug}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    onClose();
   };
 
   return (
