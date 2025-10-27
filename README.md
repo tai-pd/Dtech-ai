@@ -6,7 +6,7 @@ DTech Vietnam is a modern full-stack web application for industrial electrical e
 
 ## 🚀 Live Demo
 
-**Live Site:** [https://dtech-upgraded.preview.emergentagent.com](https://dtech-upgraded.preview.emergentagent.com)
+**Live Site:** [https://vn-equipment.preview.emergentagent.com](https://vn-equipment.preview.emergentagent.com)
 
 ## 🛠️ Tech Stack
 
