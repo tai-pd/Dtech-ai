@@ -33,6 +33,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/category/:slug" element={<CategoryPage />} />
               <Route path="/product/:slug" element={<EnhancedProductDetailPage />} />
+              <Route path="/product/:slug/:subSlug" element={<SubProductDetailPage />} />
               <Route path="/blog/:slug" element={<BlogDetailPage />} />
             </Routes>
           </main>
