@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ChevronRight, Phone, ShoppingCart, ChevronLeft, Star } from 'lucide-react';
 import { companyInfo } from '../mockData';
@@ -6,49 +6,33 @@ import productService from '../services/productService';
 import PageLoader from './PageLoader';
 import ErrorBoundary from './ErrorBoundary';
 
-// Resource wrapper for Suspense
-function wrapPromise(promise) {
-  let status = 'pending';
-  let result;
-  let suspender = promise.then(
-    (r) => {
-      status = 'success';
-      result = r;
-    },
-    (e) => {
-      status = 'error';
-      result = e;
-    }
-  );
-  
-  return {
-    read() {
-      if (status === 'pending') {
-        throw suspender;
-      } else if (status === 'error') {
-        throw result;
-      } else if (status === 'success') {
-        return result;
-      }
-    }
-  };
-}
-
-// Component that reads the resource (triggers Suspense)
+// Simple data fetcher component
 const SubProductContent = ({ parentSlug, subSlug }) => {
   const navigate = useNavigate();
-  // Use URL params as key to create new resource when params change
-  const resourceKey = `${parentSlug}-${subSlug}`;
-  const [resource] = useState(() => {
-    const promise = productService.getSubProductBySlug(parentSlug, subSlug);
-    return wrapPromise(promise);
-  });
-  
-  const response = resource.read();
-  const subProduct = response.data;
-  const parentProduct = response.parent;
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  if (!subProduct) {
+  useEffect(() => {
+    setLoading(true);
+    setError(null);
+    
+    productService.getSubProductBySlug(parentSlug, subSlug)
+      .then(response => {
+        setData(response);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err);
+        setLoading(false);
+      });
+  }, [parentSlug, subSlug]);
+
+  if (loading) {
+    return <PageLoader />;
+  }
+
+  if (error || !data) {
     return (
       <div className="flex-1 flex items-center justify-center min-h-screen bg-gray-50">
         <div className="text-center">
@@ -63,6 +47,9 @@ const SubProductContent = ({ parentSlug, subSlug }) => {
       </div>
     );
   }
+
+  const subProduct = data.data;
+  const parentProduct = data.parent;
 
   return (
     <div className="flex-1 bg-gray-50">
