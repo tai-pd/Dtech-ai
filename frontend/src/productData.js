@@ -21,36 +21,76 @@ export const featuredProducts = [
         slug: "mccb-ls-nf30-cs",
         name: "MCCB LS NF30-CS",
         parentSlug: "thiet-bi-dien-ls",
+        category: "Thiết bị đóng cắt",
+        brand: "LS Electric",
+        manufacturer: "Hàn Quốc",
         image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&h=300&fit=crop",
         price: "Liên hệ",
-        description: "Aptomat khối LS NF30-CS dòng 30A"
+        stock: "Còn hàng",
+        warranty: "24 tháng",
+        description: "Aptomat khối LS NF30-CS dòng 30A",
+        fullDescription: "MCCB LS NF30-CS là aptomat khối (cầu dao tự động dạng khối) thuộc dòng C Series - dòng kinh tế của LS Electric. Sản phẩm được thiết kế với công nghệ tiên tiến từ Hàn Quốc, đảm bảo độ bền cao và khả năng bảo vệ quá tải, ngắn mạch hiệu quả. Với dòng định mức 30A và khả năng cắt ngắn mạch lên đến 50kA, sản phẩm phù hợp cho các ứng dụng công nghiệp và dân dụng. MCCB NF30-CS có thiết kế nhỏ gọn, dễ lắp đặt và bảo trì, đáp ứng tiêu chuẩn IEC 60947-2.",
+        images: [
+          "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop"
+        ]
       },
       {
         id: 102,
         slug: "mccb-ls-nf63-cv",
         name: "MCCB LS NF63-CV",
         parentSlug: "thiet-bi-dien-ls",
+        category: "Thiết bị đóng cắt",
+        brand: "LS Electric",
+        manufacturer: "Hàn Quốc",
         image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&h=300&fit=crop",
         price: "Liên hệ",
-        description: "Aptomat khối LS NF63-CV dòng 63A"
+        stock: "Còn hàng",
+        warranty: "24 tháng",
+        description: "Aptomat khối LS NF63-CV dòng 63A",
+        fullDescription: "MCCB LS NF63-CV là aptomat khối cao cấp thuộc dòng C Series với dòng định mức 63A. Sản phẩm tích hợp các tính năng bảo vệ tiên tiến bao gồm bảo vệ quá tải nhiệt, bảo vệ ngắn mạch từ và bảo vệ quá áp. Với khả năng cắt ngắn mạch lên đến 50kA, NF63-CV đảm bảo an toàn tuyệt đối cho hệ thống điện. Sản phẩm có cấu trúc chắc chắn, độ bền cao, tuổi thọ cơ học lên đến 20,000 lần đóng cắt. Phù hợp cho tủ điện công nghiệp, nhà xưởng, trung tâm thương mại.",
+        images: [
+          "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&h=600&fit=crop"
+        ]
       },
       {
         id: 103,
         slug: "contactor-ls-mc-9b",
         name: "Contactor LS MC-9b",
         parentSlug: "thiet-bi-dien-ls",
+        category: "Thiết bị đóng cắt",
+        brand: "LS Electric",
+        manufacturer: "Hàn Quốc",
         image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
         price: "Liên hệ",
-        description: "Khởi động từ LS MC-9b dòng 9A"
+        stock: "Còn hàng",
+        warranty: "24 tháng",
+        description: "Khởi động từ LS MC-9b dòng 9A",
+        fullDescription: "Contactor LS MC-9b (Khởi động từ) là thiết bị đóng cắt điện tự động dùng để điều khiển động cơ điện và các thiết bị điện công suất nhỏ. Với dòng định mức 9A, sản phẩm phù hợp cho động cơ từ 2.2kW đến 4kW. MC-9b có cấu tạo chắc chắn với hệ thống tiếp điểm bạc cadmium oxit, đảm bảo độ bền cao và tuổi thọ điện lên đến 1 triệu lần đóng cắt. Cuộn dây điều khiển đa dạng: 24V, 110V, 220V, 380V AC/DC. Sản phẩm có thể kết hợp với relay nhiệt để tạo thành bộ khởi động từ bảo vệ quá tải hoàn chỉnh.",
+        images: [
+          "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=800&h=600&fit=crop"
+        ]
       },
       {
         id: 104,
         slug: "mcb-ls-bh-d10",
         name: "MCB LS BH-D10",
         parentSlug: "thiet-bi-dien-ls",
+        category: "Thiết bị đóng cắt",
+        brand: "LS Electric",
+        manufacturer: "Hàn Quốc",
         image: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=400&h=300&fit=crop",
         price: "Liên hệ",
-        description: "Aptomat tép LS BH-D10 cắt 10kA"
+        stock: "Còn hàng",
+        warranty: "24 tháng",
+        description: "Aptomat tép LS BH-D10 cắt 10kA",
+        fullDescription: "MCB LS BH-D10 (Aptomat tép) là cầu dao tự động dạng tép dùng để bảo vệ các mạch điện dân dụng và công nghiệp nhẹ. Với khả năng cắt ngắn mạch 10kA, sản phẩm đáp ứng tiêu chuẩn IEC 60898-1 và phù hợp cho hầu hết các ứng dụng trong nhà ở, văn phòng, trường học. Dòng sản phẩm có từ 6A đến 63A với các đặc tính cắt B, C, D. MCB BH-D10 có cấu trúc nhỏ gọn, lắp đặt dễ dàng trên thanh ray DIN 35mm. Tuổi thọ cơ học cao (20,000 lần), tuổi thọ điện (10,000 lần). Sản phẩm có khả năng chịu nhiệt tốt, hoạt động ổn định trong điều kiện nhiệt độ từ -25°C đến +70°C.",
+        images: [
+          "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop"
+        ]
       }
     ],
     productLines: [
