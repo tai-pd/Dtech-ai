@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import EnhancedProductDetailPage from './components/EnhancedProductDetailPage';
+import SubProductDetailPage from './components/SubProductDetailPage';
 import BlogDetailPage from './components/BlogDetailPage';
 import CategoryPage from './components/CategoryPage';
 import ChatWidget from './components/ChatWidget';
