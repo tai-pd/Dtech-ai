@@ -14,15 +14,18 @@ const SubProductContent = ({ parentSlug, subSlug }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    console.log('SubProductContent: fetching data for', parentSlug, subSlug);
     setLoading(true);
     setError(null);
     
     productService.getSubProductBySlug(parentSlug, subSlug)
       .then(response => {
+        console.log('SubProductContent: received response', response);
         setData(response);
         setLoading(false);
       })
       .catch(err => {
+        console.error('SubProductContent: error fetching data', err);
         setError(err);
         setLoading(false);
       });
