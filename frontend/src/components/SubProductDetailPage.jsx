@@ -201,15 +201,13 @@ const SubProductContent = ({ parentSlug, subSlug }) => {
   );
 };
 
-// Main component with Suspense
+// Main component
 const SubProductDetailPage = () => {
   const { slug, subSlug } = useParams();
   
   return (
     <ErrorBoundary>
-      <Suspense fallback={<PageLoader />}>
-        <SubProductContent parentSlug={slug} subSlug={subSlug} />
-      </Suspense>
+      <SubProductContent parentSlug={slug} subSlug={subSlug} />
     </ErrorBoundary>
   );
 };
