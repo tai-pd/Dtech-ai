@@ -84,6 +84,48 @@ const EnhancedProductDetailPage = () => {
           </div>
         </div>
 
+        {/* Sub Products Section */}
+        {product.hasSubProducts && product.subProducts && product.subProducts.length > 0 && (
+          <div className="bg-white rounded-xl shadow-md p-8 mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Sản phẩm chi tiết
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Nhấp vào từng sản phẩm bên dưới để xem thông tin chi tiết
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {product.subProducts.map((subProduct) => (
+                <div
+                  key={subProduct.id}
+                  onClick={() => {
+                    navigate(`/product/${product.slug}/${subProduct.slug}`);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all cursor-pointer overflow-hidden group"
+                >
+                  <div className="relative h-48 overflow-hidden bg-gray-100">
+                    <img
+                      src={subProduct.image}
+                      alt={subProduct.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      {subProduct.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 line-clamp-2 mb-3">{subProduct.description}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-semibold text-red-600">{subProduct.price}</span>
+                      <ChevronRight className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {product.productLines && product.productLines.length > 0 && (
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
