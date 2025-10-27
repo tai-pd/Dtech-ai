@@ -69,13 +69,17 @@ const Sidebar = ({ isOpen, onClose }) => {
                 {expandedCategories.includes(category.id) && (
                   <div className="ml-4 mt-1 space-y-1 border-l-2 border-gray-200 pl-3">
                     {category.subcategories.map((sub) => (
-                      <a
+                      <button
                         key={sub.id}
-                        href={`#${sub.slug}`}
-                        className="block py-2 px-3 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all"
+                        onClick={() => {
+                          navigate(`/product/${sub.slug}`);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                          onClose();
+                        }}
+                        className="block w-full text-left py-2 px-3 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all"
                       >
                         {sub.name}
-                      </a>
+                      </button>
                     ))}
                   </div>
                 )}
