@@ -14,6 +14,45 @@ export const featuredProducts = [
     price: "Liên hệ",
     stock: "Còn hàng",
     warranty: "24 tháng",
+    hasSubProducts: true,
+    subProducts: [
+      {
+        id: 101,
+        slug: "mccb-ls-nf30-cs",
+        name: "MCCB LS NF30-CS",
+        parentSlug: "thiet-bi-dien-ls",
+        image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&h=300&fit=crop",
+        price: "Liên hệ",
+        description: "Aptomat khối LS NF30-CS dòng 30A"
+      },
+      {
+        id: 102,
+        slug: "mccb-ls-nf63-cv",
+        name: "MCCB LS NF63-CV",
+        parentSlug: "thiet-bi-dien-ls",
+        image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&h=300&fit=crop",
+        price: "Liên hệ",
+        description: "Aptomat khối LS NF63-CV dòng 63A"
+      },
+      {
+        id: 103,
+        slug: "contactor-ls-mc-9b",
+        name: "Contactor LS MC-9b",
+        parentSlug: "thiet-bi-dien-ls",
+        image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
+        price: "Liên hệ",
+        description: "Khởi động từ LS MC-9b dòng 9A"
+      },
+      {
+        id: 104,
+        slug: "mcb-ls-bh-d10",
+        name: "MCB LS BH-D10",
+        parentSlug: "thiet-bi-dien-ls",
+        image: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=400&h=300&fit=crop",
+        price: "Liên hệ",
+        description: "Aptomat tép LS BH-D10 cắt 10kA"
+      }
+    ],
     productLines: [
       {
         id: "mccb-ls",
