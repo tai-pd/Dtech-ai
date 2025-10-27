@@ -208,11 +208,7 @@ const SubProductContent = ({ parentSlug, subSlug }) => {
 const SubProductDetailPage = () => {
   const { slug, subSlug } = useParams();
   
-  return (
-    <ErrorBoundary>
-      <SubProductContent parentSlug={slug} subSlug={subSlug} />
-    </ErrorBoundary>
-  );
+  return <SubProductContent parentSlug={slug} subSlug={subSlug} />;
 };
 
 export default SubProductDetailPage;
