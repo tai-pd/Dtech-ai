@@ -101,3 +101,95 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Implement sub-product detail pages with hyperlinks from main product pages, following the API service architecture with mocked delayed responses. Update sidebar to link subcategories to product pages."
+
+frontend:
+  - task: "Sub-product detail page component"
+    implemented: true
+    working: true
+    file: "frontend/src/components/SubProductDetailPage.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Created SubProductDetailPage.jsx component with loading states, error handling, full product details (title, description, images, specifications), breadcrumb navigation, and back buttons. Uses useEffect for data fetching instead of Suspense pattern."
+  
+  - task: "Enhanced product data with sub-product details"
+    implemented: true
+    working: true
+    file: "frontend/src/productData.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Updated productData.js to include fullDescription, category, brand, manufacturer, warranty, stock info, and images array for all sub-products (MCCB LS NF30-CS, NF63-CV, Contactor MC-9b, MCB BH-D10)."
+
+  - task: "Sub-product links on main product page"
+    implemented: true
+    working: true
+    file: "frontend/src/components/EnhancedProductDetailPage.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added 'Sản phẩm chi tiết' section displaying sub-products as clickable cards that navigate to individual sub-product detail pages at /product/:slug/:subSlug"
+
+  - task: "Sidebar product links"
+    implemented: true
+    working: true
+    file: "frontend/src/components/Sidebar.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Updated sidebar subcategories to be clickable buttons that navigate to product pages instead of anchor links. Navigation and UI working correctly with hover states."
+
+  - task: "Sub-product routing"
+    implemented: true
+    working: true
+    file: "frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added route for /product/:slug/:subSlug to handle sub-product detail pages. Imported and configured SubProductDetailPage component."
+
+  - task: "Sub-product API service"
+    implemented: true
+    working: true
+    file: "frontend/src/services/productService.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added getSubProductBySlug(parentSlug, subSlug) method to productService with 1-second delay simulation. Returns sub-product data and parent product info."
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "All sub-product features implemented and tested"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "sequential"
+
+agent_communication:
+  - agent: "main"
+    message: "Completed implementation of sub-product detail pages with all requested features: 1) Sub-product detail page component with formal layout (title, description, images), 2) Enhanced sub-product data in productData.js, 3) Clickable sub-product cards on main product pages, 4) Sidebar links to products, 5) Routing for /product/:slug/:subSlug, 6) API service method with mock delay. All features tested via screenshots and working correctly. Sub-products show proper breadcrumbs, specifications, images, CTA section, and back navigation buttons."
