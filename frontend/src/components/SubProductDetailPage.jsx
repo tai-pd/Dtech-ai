@@ -4,7 +4,6 @@ import { ChevronRight, Phone, ShoppingCart, ChevronLeft, Star } from 'lucide-rea
 import { companyInfo } from '../mockData';
 import productService from '../services/productService';
 import PageLoader from './PageLoader';
-import ErrorBoundary from './ErrorBoundary';
 
 // Simple data fetcher component
 const SubProductContent = ({ parentSlug, subSlug }) => {
