@@ -37,9 +37,12 @@ function wrapPromise(promise) {
 // Component that reads the resource (triggers Suspense)
 const SubProductContent = ({ parentSlug, subSlug }) => {
   const navigate = useNavigate();
-  const [resource] = useState(() => 
-    wrapPromise(productService.getSubProductBySlug(parentSlug, subSlug))
-  );
+  // Use URL params as key to create new resource when params change
+  const resourceKey = `${parentSlug}-${subSlug}`;
+  const [resource] = useState(() => {
+    const promise = productService.getSubProductBySlug(parentSlug, subSlug);
+    return wrapPromise(promise);
+  });
   
   const response = resource.read();
   const subProduct = response.data;
