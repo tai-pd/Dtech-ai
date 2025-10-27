@@ -125,6 +125,42 @@ class ProductService {
       throw error;
     }
   }
+
+  // Get sub-product by parent slug and sub-product slug
+  async getSubProductBySlug(parentSlug, subSlug) {
+    await delay(1000);
+    
+    try {
+      // In real API: const response = await apiClient.get(`/products/${parentSlug}/sub-products/${subSlug}`);
+      
+      // Mock response - find parent product first
+      const parentProduct = featuredProducts.find(p => p.slug === parentSlug);
+      
+      if (!parentProduct) {
+        throw new Error('Parent product not found');
+      }
+      
+      // Find sub-product within parent's subProducts
+      const subProduct = parentProduct.subProducts?.find(sp => sp.slug === subSlug);
+      
+      if (!subProduct) {
+        throw new Error('Sub-product not found');
+      }
+      
+      return {
+        success: true,
+        data: subProduct,
+        parent: {
+          id: parentProduct.id,
+          name: parentProduct.name,
+          slug: parentProduct.slug
+        }
+      };
+    } catch (error) {
+      console.error('Error fetching sub-product:', error);
+      throw error;
+    }
+  }
 }
 
 export default new ProductService();
